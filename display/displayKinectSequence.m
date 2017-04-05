@@ -9,7 +9,7 @@ function displayKinectSequence(sequenceData, mode)
 %Output:
 %
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 %Make panel for display the Kinect output
 displayHandle = makeTrackingDisplay(mode);
@@ -33,6 +33,8 @@ while i<=length(sequenceData.streamTimes)
         sPause = false;
     end
     
+    %You could place a png save function here to make a video
+    
     %Get the timestamp for the current time period
     timeStamp = sequenceData.streamTimes(i);
 
@@ -49,7 +51,6 @@ while i<=length(sequenceData.streamTimes)
     if iIt
         i = i+1;
     end
-    
 end
 
 

@@ -1,5 +1,5 @@
 function height = getKinectHeight(skels, joints)
-%This function output's predicts the height of the skeleton in real world
+%This function returns's predicts the height of the skeleton in real world
 %coordinates
 %
 %Input:
@@ -10,7 +10,7 @@ function height = getKinectHeight(skels, joints)
 %   height - the preidcted height
 %
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 %Get the kinect skeleton predictions
 x = skels{1,3};
@@ -44,7 +44,6 @@ height2 = height2 + norm(xyz(:,joints.AnkleLeft) - xyz(:,joints.FootLeft));
 heights = [height1, height2];
 
 %Now find the average height between the left and right. 
-
 height = mean(heights);
 
 end

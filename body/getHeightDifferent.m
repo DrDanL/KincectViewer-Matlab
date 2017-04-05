@@ -1,6 +1,5 @@
-function [diff] = getHeightDifferent(refHeight, currentHeight )
-%This function determines the height different between the refHeight (our
-%reference point) and currentHeight (current time instance)
+function [diff] = getHeightDifferent(refHeight, currentHeight)
+%Height difference helper function
 %
 %Input:
 %   refHeight - computered reference height
@@ -10,12 +9,12 @@ function [diff] = getHeightDifferent(refHeight, currentHeight )
 %   diff - height difference
 %
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 diff = currentHeight - refHeight;
 
 %Convert over to mm
-diff = diff*100; %changed from round
+diff = diff*100; %place with cm
 
 end
 

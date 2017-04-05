@@ -8,7 +8,7 @@ function depthSeq = ReadKinectDepthSequence(loc)
 %   depthSeq - a structure containing a sequence of depth images. 
 %
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 
 %Generate directory structure 
@@ -41,6 +41,7 @@ for i=1:nfiles
    temp = {};
    [temp.X, temp.Y] = meshgrid([1:dims(1)], [1:dims(2)]); %obtain x and y
    temp.Z = reshape(depth, dims(1), dims(2))'; %generate depth
+   %Play around with this. You may find the outcome interesting
    %temp.Z(temp.Z==0)=NaN; % noise clean up
    depthSeq{i} = temp;
 end

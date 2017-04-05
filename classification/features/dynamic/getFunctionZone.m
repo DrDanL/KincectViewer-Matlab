@@ -10,7 +10,7 @@ function [Z] = getFunctionZone(X)
 %   Z - Total Area Covered
 %
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 %Minimum and maximum distances
 xMin = min(X);
@@ -19,7 +19,6 @@ xMax = max(X);
 %Find the different between the two
 eachJoint = abs(xMin - xMax);
 
-%Summaion of in cm
 Z = sum(eachJoint);
 
 end

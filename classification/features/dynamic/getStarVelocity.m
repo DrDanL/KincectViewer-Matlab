@@ -1,16 +1,17 @@
 function [V] = getStarVelocity(S,t)
-%This function computes the Velocity from the Star Skeleton Features. We
+%This function computes the velocity from the star skeleton features. We
 %handle each joint individually. Dynamic as the CoM changes based on the
-%the subject movement
+%the subject movement.
+%
 %Input:
 %   S - Star Skeleton matrix (n x P where n is the number of features)
-%   t - time delt
+%   t - time delta
 %
 %Output:
 %   V - Velocity
 %
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 %Cleanup and remove any NaNs
 S(any(isnan(S),2),:)=[];
@@ -26,12 +27,11 @@ while s+t <= size(S,1)
     
     V(it,:) = abs(S(s+t,:) - S(s,:));
         
-    %Add time
+    %Add delta
     it = it+1;
     s=s+t;%Add t
     e=e+t;%Add t
 end
-
 
 end
 

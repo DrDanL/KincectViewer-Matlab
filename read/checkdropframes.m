@@ -1,6 +1,7 @@
 function checkdropframes(fileLoc)
 %This function determines the FPS for a kinect sequence. Further, it
 %determines the FPS for each data stream. 
+%
 %Input:
 %   fileLoc - file location of the master directory
 %
@@ -8,7 +9,7 @@ function checkdropframes(fileLoc)
 %   fprintf - print statment to screen. 
 %
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 %Get the Kinect timestamp sequence
 sequenceData = ReadSequence(fileLoc);

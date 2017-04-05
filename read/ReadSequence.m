@@ -9,7 +9,7 @@ function sequenceData = ReadSequence(subject)
 %   sequenceData - contains the sequence data for the subject/action
 %
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 %Initialize
 sequenceData = {};

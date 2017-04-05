@@ -9,7 +9,7 @@ function stamp = ReadTimeStamps(loc)
 %   stamp - timestamp sequence
 %
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 if (exist(loc, 'file') == 2)
     %Read in the file. We use the dlmread to read in each line.

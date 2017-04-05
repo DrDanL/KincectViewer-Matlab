@@ -1,5 +1,5 @@
 function joints = getKinectJoints()
-%This function output's the Kinect skeleton structure when required. The
+%This function returns the Kinect skeleton structure when required. The
 %structure relates to the index location within the skeleton file.
 %
 %Input:
@@ -8,7 +8,7 @@ function joints = getKinectJoints()
 %   joints - joint structure
 %
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 %Joint index locations
 joints.SpineBase = 1; %1:3
@@ -39,7 +39,6 @@ joints.ThumbRight =25;
 
 %The number of joints
 joints.position_count = 25;
-
 
 end
 

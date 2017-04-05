@@ -1,4 +1,4 @@
-function [S] = getStarSkeleton(X,COM)
+function [output] = getStarSkeleton(X,COM)
 %This function determines the distance from the CoM to each joint using
 %absolute Euclidean distance (for each time period). The function provides 
 %the delta statistic for for the feature vector.Dynamic as the CoM changes
@@ -12,14 +12,14 @@ function [S] = getStarSkeleton(X,COM)
 %   S - Star Skeleton Representation
 %
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 
 %Cleanup and remove any NaNs
 X(any(isnan(X),2),:)=[];
 
 %Feature vector contain HandLeft, HandRight, FootLeft, FootRight
-S = [];
+output = [];
 
 %Compute change based on time delta t
 s = 1;%Time step
@@ -32,9 +32,9 @@ while s <= size(X,1)
         sPoint = sPoint+ 3;
     end
     
-    S(s,:) = dM;
+    output(s,:) = dM;
     
-    s=s+1;%Add t
+    s=s+1;%Add delta
 end
 
 

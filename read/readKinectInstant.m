@@ -11,7 +11,7 @@ function [Depth, RGB, Skels] = readKinectInstant(sequenceData, timestamp)
 %   Skels - skeleton structure
 %
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 
 if ~isempty(sequenceData.depthTimes)

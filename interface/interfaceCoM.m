@@ -58,7 +58,6 @@ uicontrol('Style', 'popup',...
             plot(V);
             axis([0 size(V,1) min(V) max(V)]);
             
-            
         end
     end
 end

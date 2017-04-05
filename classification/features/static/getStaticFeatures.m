@@ -1,9 +1,7 @@
-function [S] = getStaticFeatures(X)
+function [output] = getStaticFeatures(X)
 %This function generates a set of static features. These features should be
 %constant over time. These features should highlight where a skeleton is
-%incorrectly formed. All the features listed below are
-%static. Meaning that these features do not change with time. Ie. Euclidean
-%distance is mutually shared between all time periods. 
+%incorrectly formed. Playing around with possible features. 
 %
 %Input:
 %   X - skeleton matrix (m * n) where n is time (ensure nans are removed)
@@ -12,9 +10,10 @@ function [S] = getStaticFeatures(X)
 %   S - Static feature list (m * n)
 %
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
-S = [];
+%Setup
+output = [];
 joints = getKinectJoints(); %Generate joint structure
 
 %Loop through each frame and generate our features of interest
@@ -102,7 +101,7 @@ for i=1:size(X,1)
     
     % FEATURE VECTOR FORM
     %These feature vector for each time period. 
-    S(i,:) = [height, torsoL, lLeg, rLeg, lowLleg, lowRleg, teLleg, teRleg, upLeftArm, upRightArm,lowLeftArm, lowRighttArm, shoLen ];
+    output(i,:) = [height, torsoL, lLeg, rLeg, lowLleg, lowRleg, teLleg, teRleg, upLeftArm, upRightArm,lowLeftArm, lowRighttArm, shoLen ];
     
 end
 

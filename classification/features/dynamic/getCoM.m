@@ -11,7 +11,7 @@ function [C, V] = getCoM(X,t)
 %   V - Change over time
 %
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 
 C = []; %Store CoM for each time period

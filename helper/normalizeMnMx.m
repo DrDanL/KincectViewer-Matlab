@@ -1,6 +1,7 @@
 function [outputClass]=normalizeMnMx(superClass,par1,par2)
 %A function to normalise the input (superClass) to be within the region of
 %par1 and par2
+%
 %Input:-
 %   superClass - The N set of datapoints
 %   par1 - lowest value
@@ -10,7 +11,7 @@ function [outputClass]=normalizeMnMx(superClass,par1,par2)
 %   outputClass - normalised data
 %
 %History:-
-%   Created by Dan 03/02/2014
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 
 %Loop through super class and normalise the data

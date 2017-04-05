@@ -1,7 +1,4 @@
 function masterDisplay(fileInpt)
-%This function displays only the Kinect data. The user is promted to enter
-%the desired loading location. 
-clc
 
 global fileLoc;
 fileLoc = fileInpt;
@@ -14,7 +11,6 @@ sequenceData = ReadSequence(fileLoc);
 
 %Display the sequenceData based on a time ordering
 displayKinectSequence(sequenceData, 'all');
-
 
 end
 

@@ -6,7 +6,7 @@ function [depthImg] = ReadKiectDepthIndivi(loc)
 %Ouput:
 %   depthImg - depth image
 %History:
-%   Created by Dan 15/02/15
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 %Read in the file
 fid = fopen(loc); %read the file in
@@ -20,6 +20,7 @@ depth = double(A); %conver to double for imaging
 
 [depthImg.X, depthImg.Y] = meshgrid([1:dims(1)], [1:dims(2)]); %obtain x and y
 depthImg.Z = reshape(depth, dims(1), dims(2))'; %generate depth
+%Toggle this to see the results
 %temp.Z(temp.Z==0)=NaN; % noise clean up
 
 end

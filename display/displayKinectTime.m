@@ -10,7 +10,7 @@ function displayKinectTime(displayHandles, sequenceData, timeStamp)
 %Ouput:
 %
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 %Display the data at a certain time point based on Kinect
 [Depth, RGB, Skels] = readKinectInstant(sequenceData, timeStamp);
@@ -73,7 +73,6 @@ if ~isempty(displayHandles.rgbHandle)
                   
         end
     end
-    
 end
 
 end

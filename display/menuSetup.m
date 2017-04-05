@@ -1,6 +1,7 @@
+%Create the menu. Messy but needed to allow new users to understand the 
+%features 
+
 f = uimenu('Label','Features');
-
-
 dyn = uimenu(f, 'Label','Dynamic');
 uimenu(dyn,'Label','Joints (XYZ)','Callback',@interfaceJointXYZ);
 uimenu(dyn,'Label','CoM','Callback',@interfaceCoM);

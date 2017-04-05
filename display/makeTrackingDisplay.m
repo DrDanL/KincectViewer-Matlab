@@ -10,14 +10,13 @@ function [displayHandles] = makeTrackingDisplay(disMode)
 %   displayHandles - display handle for the selected mode
 %
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 %Clear the handles and initialise
 displayHandles.depthHandle = [];
 displayHandles.skelHandle = [];
 displayHandles.rgbHandle = [];
 displayHandles.shouterHandle = [];
-
 
 %Switch for different display modes
 switch disMode
@@ -36,7 +35,6 @@ switch disMode
         az = 180; el = -90;
         
         % For manual axes creation: [left bottom width height]
-        
         % Notes: "axis vis3d freezes aspect ratio properties to enable
         % rotation of 3-D objects and overrides stretch-to-fill."
         

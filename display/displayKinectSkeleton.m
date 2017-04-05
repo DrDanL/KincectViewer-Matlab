@@ -11,9 +11,7 @@ function handle = displayKinectSkeleton(ax, Skels, world)
 %   handle - return the kinect handle 
 %
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
-
-
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 %Number of joints
 joints = getKinectJoints();
@@ -80,7 +78,6 @@ end
 
 %Orignal XYZ subpolot
 if rgb
-    
     x = str2double(skels{3});
     y = str2double(skels{4});
     x(find(isnan(x))) = 0;
@@ -99,7 +96,6 @@ end
 
 %Join the skeleton
 xyz_step=[x y z];
-
 
 %Plot the skeleton
 handle = scatter3(ax, xyz_step(:,1), xyz_step(:,2), xyz_step(:,3), 'bo');

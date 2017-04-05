@@ -1,8 +1,8 @@
 function refHeight = getHeightReference(sequenceData, refPoint)
 %This function computes the reference height for a subject. We are
-%interested in finding their average standing height. We are then able to
+%interested in finding the average standing height. We are then able to
 %determine if they are increasing (aka jumping) or decreasing (aka
-%bending). 
+%bending/sitting down). 
 %
 %Input:
 %   sequenceData - sequence information
@@ -12,10 +12,13 @@ function refHeight = getHeightReference(sequenceData, refPoint)
 %   refHeight - compute height
 %   
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
-%Commented out due to we're loading absolute path
 Skels = readKinectSkeletonIndid([sequenceData.name '/skel/' num2str(refPoint) '.txt'  ]);
+
+%You could do some fancy height computation here. In previous work, we have
+%utilised a normatived height over a period delta with a bandwidth filter
+%to handle noise. 
 
 %We select the first frame (Spine) and extract the y axis information
 refHeight = Skels.threeD{4}(2);

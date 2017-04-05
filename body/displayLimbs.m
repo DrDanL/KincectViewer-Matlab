@@ -12,7 +12,7 @@ function [ handle ] = displayLimbs(ax, xyz, jointLoc, color, width)
 %   handle - Kinect handle
 %
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 handle = line(xyz(1,jointLoc), xyz(2,jointLoc), xyz(3,jointLoc), 'Color', color, 'Parent', ax, 'LineWidth', width);
 

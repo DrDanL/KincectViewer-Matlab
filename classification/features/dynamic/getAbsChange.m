@@ -1,6 +1,6 @@
-function [absS] = getAbsChange(X, t)
+function [absDist] = getAbsChange(X, t)
 %This function computes the absolute distance different between each joint
-%over time. We compare handt1 to handt2. 
+%over time.
 %
 %Input:
 %   X - Skeleton matrix (n x P where n is time)
@@ -10,15 +10,18 @@ function [absS] = getAbsChange(X, t)
 %   absS - Change over time
 %
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 %Cleanup and remove any NaNs
 X(any(isnan(X),2),:)=[];
 
 %Compute change based on time delta t
-s = 1;%Time step start
-e = t;%End time
-it =1;% iteration
+s = 1;  %Time step start
+e = t;  %End time
+it =1;  % iteration
+
+%TODO initalise in memory absDist 
+
 while e+t <= size(X,1)
     
     dM= []; %Hold distances
@@ -27,15 +30,14 @@ while e+t <= size(X,1)
         dM(i) = absDistance(X(s, sPoint:sPoint+2), X(s+t,sPoint:sPoint+2));
         sPoint = sPoint+ 3;
     end
-    absS(it,:) = dM;
+    absDist(it,:) = dM;
     
     %Add time
     it = it+1;
-    s=s+t;%Add t
-    e=e+t;%Add t
+    s=s+t;%Add delta
+    e=e+t;%Add delta
     
 end
-
 
 end
 

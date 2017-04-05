@@ -8,7 +8,7 @@ function [X] = getSkeletonFile(S)
 %   X - Computed action sequence
 %
 %History:
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
 %Pass the option
 option = S;
@@ -17,7 +17,6 @@ option = S;
 database_sppb
 
 %Load
-
 X = load([fileLoc '/skelData.mat']);
 
 

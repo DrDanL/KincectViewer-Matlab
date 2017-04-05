@@ -10,14 +10,13 @@ function [D] = absDistance(P1, P2)
 %   D - Absolute distance
 %
 %History:
-%   Created by Dan L (dleightley@ieee.org) 17/06/2014
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
  
 xd = P2(1) - P1(1);
 yd = P2(2) - P1(2);
 zd = P2(3) - P1(3);
  
 D = sqrt(xd*xd + yd*yd + zd*zd);
- 
  
 end
  

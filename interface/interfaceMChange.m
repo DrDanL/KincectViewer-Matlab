@@ -154,6 +154,4 @@ uicontrol('Style', 'popup',...
             
         end
     end
-
-
 end

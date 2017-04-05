@@ -1,13 +1,17 @@
 function [N] = kinectHipNorm(X)
-%A function to normalise all joints in the sequence to the hip joint of the
+%A function to normalise joints in the sequence to the hip joint of the
 %first frame(1,1:3)
+%NOTE: You should consider if this is the best approach. You may want to
+%consider performing normalisation for each time period. 
+%
 %Input:-
 %   X - Matrix to be normalised
 %Output:-
 %   N = normalised data to the hip centre of the first frame
 %History:-
-%   Created by Daniel Leightley (dleightley@ieee.org) 03/10/2016
+%   Created by Dan Leightley (dleightley@ieee.org) 04/04/2017
 
+%Clean up
 X(any(isnan(X),2),:)=[];
 
 %Obtain the first frame hip centre joint information
